@@ -11,7 +11,7 @@ class Service
         $livingSpace = LivingSpace::create([
             'title' => $data['title'],
             'description' => $data['description'],
-            'address' => $data['address'],
+            'address' => mb_strtolower($data['address']),
             'square' => $data['square'],
             'height' => $data['height'],
             'year' => $data['year'],
@@ -20,6 +20,7 @@ class Service
             'finishing' => $data['finishing'],
             'room_id' => $data['room_id'],
             'type_id' => $data['type_id'],
+            'user_id' => auth()->user()->id,
         ]);
     }
 

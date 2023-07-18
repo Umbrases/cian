@@ -11,6 +11,7 @@ class UpdateController extends BaseController
     public function __invoke(UpdateRequest $request, LivingSpace $livingSpace)
     {
         $data = $request->validated();
+        dd($request->title);
         $this->service->update($livingSpace, $data);
         return redirect()->route('sale.show', $livingSpace->id);
     }

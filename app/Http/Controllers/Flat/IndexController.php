@@ -9,7 +9,7 @@ class IndexController extends Controller
 {
     public function __invoke()
     {
-        $livingSpaces = LivingSpace::all();
+        $livingSpaces = LivingSpace::where('type_id', 'ilike', 1)->paginate(20);
         return view('Flat.index', compact('livingSpaces'));
     }
 }
