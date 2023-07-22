@@ -8,7 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Image extends Model
 {
     use HasFactory;
-    public function livingSpaces(){
+    public function livingSpaces()
+    {
         return $this->belongsTo(LivingSpace::class, 'living_space_id', 'id');
     }
 }

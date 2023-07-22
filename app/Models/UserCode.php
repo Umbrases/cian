@@ -17,5 +17,4 @@ class UserCode extends Model
         'code',
     ];
 
-
 }
