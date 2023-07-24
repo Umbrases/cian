@@ -27,5 +27,6 @@
 
 ## Project Launch
 
-**MAIL_MAILER=smtp**<br>
-**MAIL_HOST=smtp.yandex.ru**<br>
+**docker-compose** **up**<br>
+**php** **artisan** **migrate**<br>
+
